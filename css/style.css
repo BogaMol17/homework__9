@@ -1,0 +1,525 @@
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Black.woff2") format("woff2"), url("../fonts/Gilroy-Black.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Обнуляющий стиль */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+ol li,
+ul li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	font-size: 14px;
+	line-height: 1;
+	font-family: Gilroy;
+}
+/* -------------- */
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+.header {
+	padding: 30px 0px 10px 0px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+}
+.container {
+	max-width: 1160px;
+	padding: 0px 10px;
+	margin: 0 auto;
+}
+.header__top {
+	margin: 0px 0px 30px 0px;
+}
+.header__logotip {
+	display: inline-block;
+	margin: 0px 65px 0px 0px;
+}
+.header__logo {
+	font-weight: 700;
+	font-size: 52px;
+	color: #e1e1e1;
+	display: inline-block;
+}
+.header__logo::after {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 40px;
+	background: #d8d8d8;
+	border: 1px solid #89afef;
+	margin: 0px 25px 0px 18px;
+}
+.header__info {
+	display: inline-block;
+	max-width: 200px;
+	font-weight: 500;
+	font-size: 14px;
+	color: #5d5d5d;
+}
+.header__social {
+	display: inline-block;
+	margin: 0px 85px 0px 0px;
+}
+.social__link {
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+	margin: 0px 18px 0px 0px;
+}
+.social__link:last-child {
+	margin: 0px 0px 0px 0px;
+}
+
+.w {
+	background: url(../img/icons/whatsapp-logo.svg) center no-repeat;
+	background-color: #2dd038;
+	box-shadow: 0px 8px 25px rgba(45, 208, 56, 0.497678);
+}
+.w:hover {
+	box-shadow: 0px 8px 25px 5px rgba(45, 208, 56, 0.497678);
+}
+.v {
+	background: url(../img/icons/viber-logo.svg) center no-repeat;
+	background-color: #7b519d;
+	box-shadow: 0px 8px 25px rgba(123, 81, 157, 0.503797);
+}
+.v:hover {
+	box-shadow: 0px 8px 25px 5px rgba(123, 81, 157, 0.503797);
+}
+.t {
+	background: url(../img/icons/telegram.svg) center no-repeat;
+	background-color: #5bbaf0;
+	box-shadow: 0px 8px 25px rgba(91, 186, 240, 0.5);
+}
+.t:hover {
+	box-shadow: 0px 8px 25px 5px rgba(91, 186, 240, 0.5);
+}
+.header__contacts {
+	display: inline-block;
+	vertical-align: top;
+	text-align: right;
+	margin: 0px 25px 0px 0px;
+}
+.header__tel {
+	display: block;
+	font-weight: 700;
+	font-size: 20px;
+	position: relative;
+	color: #000;
+	padding: 0px 0px 0px 25px;
+	margin: 0px 0px 10px 0px;
+}
+.header__tel::before {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	content: "";
+	display: inline-block;
+	background: url(../img/icons/call-answer.svg) no-repeat;
+}
+.header__mail {
+	font-weight: 500;
+	font-size: 17px;
+	color: #000;
+	padding: 0px 0px 0px 25px;
+	position: relative;
+}
+.header__mail::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 4px;
+	left: 0;
+	background: url(../img/icons/mail-black-envelope-symbol.svg) no-repeat;
+}
+.header__button {
+	display: inline-block;
+	vertical-align: top;
+}
+.header__btn {
+	display: inline-block;
+	font-weight: 600;
+	font-size: 18px;
+	color: #fff;
+	height: 44px;
+	line-height: 44px;
+	background: linear-gradient(90deg, #f6bd60 0%, #e88952 100%);
+	box-shadow: 0px 8px 18px rgba(242, 147, 81, 0.450503);
+	border-radius: 3px;
+	padding: 0px 25px 0px 25px;
+}
+.header__btn:hover {
+	background: linear-gradient(360deg, #f6bd60 0%, #e88952 100%);
+}
+
+.menu__list li {
+	display: inline-block;
+	text-transform: uppercase;
+	margin: 0px 44px 0px 0px;
+}
+.menu__link {
+	font-weight: 500;
+	font-size: 16px;
+	color: #000;
+}
+.menu__link:hover {
+	text-decoration: underline;
+}
+
+.content {
+	padding: 200px 0px 0px 0px;
+	background: url(../img/bg.png) center top no-repeat;
+}
+
+.content__block {
+	max-width: 680px;
+	display: inline-block;
+}
+.content__title {
+	font-weight: 900;
+	font-size: 40px;
+	line-height: 51px;
+	margin: 0px 0px 45px 0px;
+}
+.content__text {
+	font-weight: 500;
+	font-size: 24px;
+	margin: 0px 0px 30px 0px;
+}
+.content__text span {
+	font-weight: 800;
+	font-size: 24px;
+}
+
+.content__btn {
+	font-weight: 700;
+	font-size: 16px;
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: linear-gradient(90deg, #87aff1 0%, #6c80cb 100%, #6c80cb 100%);
+	box-shadow: 0px 12px 20px rgba(132, 170, 237, 0.454846);
+	border-radius: 3px;
+	display: inline-block;
+	padding: 0px 67px;
+	text-transform: uppercase;
+}
+.content__btn:hover {
+	background: linear-gradient(180deg, #87aff1 0%, #6c80cb 100%, #6c80cb 100%);
+}
+.content__img {
+	display: inline-block;
+	vertical-align: top;
+	position: relative;
+	top: -37px;
+	z-index: 1;
+}
+/*=================================================================================================*/
+.footer__road {
+	background-color: grey;
+	min-height: 300px;
+	border-bottom: 5px dashed #fff;
+	border-top: 50px solid rgb(110, 90, 1);
+}
+.footer__roadtwo {
+	background-color: grey;
+	min-height: 300px;
+	border-bottom: 50px solid rgb(110, 90, 1);
+	padding: 20px 0px 0px 0px;
+}
+.footer__bus {
+	height: 223px;
+	max-width: 600px;
+	margin: 0 auto;
+	border-radius: 20px 180px 20px 20px;
+	overflow: hidden;
+}
+.footer__car {
+	max-width: 600px;
+	border: 2px solid #000;
+	border-top: 5px solid #46aef7;
+	height: 180px;
+	margin: 0 auto;
+	border-radius: 20px 180px 20px 20px;
+	position: relative;
+	background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+}
+.car__door {
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	width: 150px;
+	height: 100%;
+	border-radius: 0px 82px 0px 0px;
+	position: absolute;
+	top: 0;
+	right: 100px;
+}
+.car__door::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 3px;
+	top: 50%;
+	left: 10px;
+	background-color: #000;
+}
+.car__door span {
+	display: inline-block;
+	width: 100%;
+	height: 45%;
+	border-bottom: 1px solid #000;
+	border-radius: 0px 80px 0px 0px;
+	background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+.car__seconddoor {
+	width: 180px;
+	height: 100%;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+	position: absolute;
+	top: 0;
+	left: 165px;
+	position: relative;
+	text-align: center;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: 900;
+	font-size: 25px;
+	color: #2312bb;
+	text-shadow: 2px 2px 2px #7b519d;
+}
+.car__seconddoor::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	width: 15px;
+	height: 3px;
+	top: 50%;
+	right: 10px;
+	background-color: #000;
+}
+.car__seconddoor span {
+	display: inline-block;
+	width: 100%;
+	height: 45%;
+	border-bottom: 1px solid #000;
+	background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+}
+.car__backwindow {
+	width: 165px;
+	height: 45%;
+	border-bottom: 1px solid #000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+	border-radius: 10px 0px 0px 0px;
+}
+.car__backwindow::after {
+	content: "";
+	display: inline-block;
+	width: 30px;
+	height: 10px;
+	background-color: red;
+	bottom: -30px;
+	left: 0;
+	position: absolute;
+	box-shadow: -10px 1px 10px 2px rgb(138, 20, 20);
+}
+
+.car__window {
+	width: 100px;
+	height: 45%;
+	border-bottom: 1px solid #000;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+	border-radius: 0px 0px 0px 0px;
+}
+
+.car__window::after {
+	content: "";
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background-color: #fff;
+	bottom: -40px;
+	right: 4px;
+	position: absolute;
+	border-radius: 5px 30px 0px 20px;
+	box-shadow: 10px 0px 10px 2px #fff;
+	z-index: 2;
+}
+.car__window::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 20px;
+	background-color: orange;
+	bottom: -40px;
+	right: 34px;
+	position: absolute;
+	border-radius: 0px 0px 0px 10px;
+	z-index: 3;
+	box-shadow: 0px 0px 10px 2px orange;
+}
+.car__wheelbg {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #000;
+	position: absolute;
+	z-index: 5;
+	bottom: -45px;
+	left: 55px;
+}
+
+.car__wheelbgf {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #000;
+	position: absolute;
+	z-index: 5;
+	bottom: -45px;
+	right: 61px;
+}
+.car__wheelbgcicle {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: grey;
+	position: absolute;
+	z-index: 5;
+	bottom: -41px;
+	right: 465px;
+}
+.car__wheelbgcicle::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 28px;
+	left: 28px;
+	background-color: #000;
+	border-radius: 50%;
+	z-index: 6;
+}
+
+.car__wheelbgcicle span {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+.car__wheelbgcicled {
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	background-color: grey;
+	position: absolute;
+	z-index: 5;
+	bottom: -40px;
+	left: 461px;
+}
+.car__wheelbgcicled::before {
+	content: "";
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 28px;
+	left: 28px;
+	background-color: #000;
+	border-radius: 50%;
+	z-index: 6;
+}
+
+.car__wheelbgcicled span {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: #fff;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
